@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "clstyle"
+version = "0.1.0"
+description = ""
+authors = ["norahyk <norahyk@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pydocstyle = "^6.1.1"
+typer = {extras = ["all"], version = "^0.7.0"}
+loguru = "^0.6.0"
+tree-sitter = "^0.20.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6"
+black = "^22.10.0"
+tox = "^3.27.0"
+
+[tool.poetry.scripts]
+clstyle = "clstyle.cli:main"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+testpaths = [
+    "tests"
+]
